@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-vellum-50 text-ink-900 font-body antialiased dark:bg-ink-900 dark:text-vellum-100;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .catalog-divider {
+    background-image: repeating-linear-gradient(
+      to right,
+      currentColor 0,
+      currentColor 4px,
+      transparent 4px,
+      transparent 9px
+    );
+    height: 1px;
+    opacity: 0.35;
+  }
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(169, 126, 47, 0.35);
+    border-radius: 999px;
+  }
+}
